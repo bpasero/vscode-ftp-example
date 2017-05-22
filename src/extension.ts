@@ -142,7 +142,10 @@ class FtpTreeDataProvider implements TreeDataProvider<FtpNode>, TextDocumentCont
                 arguments: [element.resource],
                 title: 'Open FTP Resource'
             },
-            iconPath: element.isFolder ? path.join(__filename, '..', '..', '..', 'resources', 'Folder_16x.svg') : path.join(__filename, '..', '..', '..', 'resources', 'Document_16x.svg')
+            iconPath: {
+                light: element.isFolder ? path.join(__filename, '..', '..', '..', 'resources', 'Folder_16x.svg') : path.join(__filename, '..', '..', '..', 'resources', 'Document_16x.svg'),
+                dark: element.isFolder ? path.join(__filename, '..', '..', '..', 'resources', 'Folder_inverse_16x.svg') : path.join(__filename, '..', '..', '..', 'resources', 'Document_inverse_16x.svg')
+            }
         };
     }
 
